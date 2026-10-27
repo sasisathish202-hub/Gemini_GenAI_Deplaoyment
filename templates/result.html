@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini AI Response</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            padding: 25px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #00000015;
+        }
+
+        h1 {
+            color: #4f46e5;
+        }
+
+        .question {
+            padding: 15px;
+            background: #eef2ff;
+            border-radius: 8px;
+            overflow-wrap: anywhere;
+        }
+
+        .answer {
+            line-height: 1.7;
+            overflow-wrap: anywhere;
+            white-space: pre-wrap;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+
+        pre {
+            padding: 15px;
+            background: #202124;
+            color: white;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #4f46e5;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Gemini AI Response</h1>
+
+        <h3>Your Question</h3>
+        <div class="question">{{ prompt }}</div>
+
+        <h3>AI Answer</h3>
+        <div class="answer">
+            {% if response %}
+                {{ response }}
+            {% else %}
+                No answer received from Gemini. Please check the API response.
+            {% endif %}
+        </div>
+
+        <a href="/">&#8592; Ask Another Question</a>
+    </div>
+</body>
+</html>
